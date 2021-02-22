@@ -52,8 +52,8 @@ phi <- function(x,y){
 
 chi <- function(x,y){
   t <- addmargins(table(x,y))
-  E <- rep(t[-length(levels(x)) + 1,length(levels(y)) + 1], each = length(levels(y))) * 
-    rep((t[length(levels(x)) + 1,-length(levels(y)) + 1]/length(x)), length(levels(x)))
+  E <- rep(t[-(length(levels(x)) + 1),length(levels(y)) + 1], each = length(levels(y))) * 
+    rep((t[length(levels(x)) + 1,-(length(levels(y)) + 1)]/length(x)), length(levels(x)))
   sum(((as.vector(table(x,y)) - E)^2) %*% E^(-1))
 }
 
