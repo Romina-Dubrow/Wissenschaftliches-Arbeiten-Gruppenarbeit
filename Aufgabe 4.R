@@ -1,4 +1,17 @@
-### Analyse des Datensatzes 
+#### Analyse des Datensatzes 
+
+zahlenspezialisten <- read.csv("Datensatz.csv", stringsAsFactors = TRUE) # Einladen der Zeichenketten als Faktoren erleichtert folgende Arbeit
+
+str(zahlenspezialisten)
+
+attach(zahlenspezialisten)
+
+### bivariater Zusammenhang von Studienfach und Mathe-LK beschrieben durch Cramér- und Pearson-Kontingenzkoeffizienten (Funktion c) )
+
+zus_kat(Studienfach, Mathe.LK) 
+
+# es scheint deutliche Abhängigkeiten zu geben
+
 
 Daten <- read.csv("Datensatz.csv")
 
