@@ -48,25 +48,17 @@ phi <- function(x,y){
                                            * (t[1,1] + t[2,1]) * (t[1,2] + t[2,2]))
 }
 
-# Chi-Koeffizient 
-
-chi <- function(x,y){
-  t <- addmargins(table(x,y))
-  E <- rep(t[-(length(levels(x)) + 1),length(levels(y)) + 1], each = length(levels(y))) * 
-    rep((t[length(levels(x)) + 1,-(length(levels(y)) + 1)]/length(x)), length(levels(x)))
-  sum(((as.vector(table(x,y)) - E)^2) %*% E^(-1))
-}
 
 # Cramér
 
 cramer <- function(x,y){
-sqrt(chi(x,y)/(length(x) * min(length(levels(x)), length(levels(y)))))
+sqrt(summary(x,y)$statistic/(length(x) * min(length(levels(x)), length(levels(y)))))
 }
 
 # Pearson
 
 pears <- function(x,y){
-  sqrt(chi(x,y)/(chi(x,y) + length(x)))
+  sqrt(summary(x,y)$statistic/(summary(x,y)$statistic + length(x)))
 }
 
 pears.korr <- function(x,y){
