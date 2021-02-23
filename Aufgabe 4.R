@@ -17,7 +17,7 @@ zus_kat(Studienfach, Mathe.LK)
 # es scheint einen deutlichen Zusammenhang zwischen dem Studienfach und der Belegung vom Mathe-LK zu geben 
 
 
-Daten <- read.csv("Datensatz.csv")
+Daten <- zahlenspezialisten
 
 ### Kategorisierung der Daten mithilfe von Quantilen (Funktion e) )
 
