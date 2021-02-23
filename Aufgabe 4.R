@@ -44,4 +44,21 @@ for (i in 1:2) {
   e(LK[[i]]$Intersse.an.Programmieren)
 }
 
+# Visualisierung
+katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Mathe.LK)
+## je höher das Interesse.an.Mathematik ist, desto eher Mathe.LK
+## bei Interesse an Mathe>=6 haben alle Mathe.LK==Ja
+## zwischen Interesse.an.Programmieren und Mathe.LK besteht kein deutlicher Zusammenhang
+
+katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Studienfach)
+## Studienfach==Mathematik hat Interesse.an.Mathematik>=5 (mit zwei Ausreißern bei 3) und Interesse.an.Programmieren<5
+## Studienfach==Statistik hat Interesse.an.Mathematik>=4 (mit zwei Aureißern bei 3) und Interesse.an.Programmieren zw. 2 und 6
+## Studienfach==Informatik hat Interesse.an.Mathematik zw. 2 und 5 und Interesse.an.Programmieren>4
+## Studienfach==Data Science hat Interesse.an.Mathematik zw. 1 und 6 und Interesse.an.Programmieren zw. 2 und 7
+
+katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Mathe.LK, Daten$Studienfach)
+## gesteigertes Interesse an Mathe und geringeres Interesse an Prog spricht für Mathematik oder Statistik, mit Mathe-LK für Mathematik
+## gesteigertes Interesse an Mathe und mittleres Interesse an Prog spricht für Statistik, vor allem mit Mathe-LK
+## mittleres Interesse an Mathe und gesteigertes Interesse an Prog spricht für Informatik, eher ohne Mathe-LK
+## gleich großes Interesse an Mathe und Prog spricht für Data Science, eher ohne Mathe-LK
 
