@@ -9,8 +9,12 @@ attach(zahlenspezialisten)
 ### bivariater Zusammenhang von Studienfach und Mathe-LK beschrieben durch Cramér- und Pearson-Kontingenzkoeffizienten (Funktion c) )
 
 zus_kat(Studienfach, Mathe.LK) 
+#Nominales Merkmal:
+# Kontingenzkoeffizienten...
+#...nach Cramér: 0.4147429
+#...nach Pearson: 0.5059301 , korrigiert: 0.7154932 
 
-# es scheint deutliche Abhängigkeiten zu geben
+# es scheint einen deutlichen Zusammenhang zwischen dem Studienfach und der Belegung vom Mathe-LK zu geben 
 
 
 Daten <- read.csv("Datensatz.csv")
