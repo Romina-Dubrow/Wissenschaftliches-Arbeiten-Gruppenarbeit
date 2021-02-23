@@ -52,13 +52,13 @@ phi <- function(x,y){
 # Cramér
 
 cramer <- function(x,y){
-sqrt(summary(x,y)$statistic/(length(x) * min(length(levels(x)), length(levels(y)))))
+sqrt(summary(table(x,y))$statistic/(length(x) * min(length(levels(x)), length(levels(y)))))
 }
 
 # Pearson
 
 pears <- function(x,y){
-  sqrt(summary(x,y)$statistic/(summary(x,y)$statistic + length(x)))
+  sqrt(summary(table(x,y))$statistic/(summary(table(x,y))$statistic + length(x)))
 }
 
 pears.korr <- function(x,y){
