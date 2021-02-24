@@ -5,7 +5,7 @@ Gruppenmitglieder:
 
 Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, kathrin.henkenherm\@tu-dortmund.de, anna.herdick\@tu-dortmund.de, ... , luca.sauer@tu-dortmund.de
+Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, kathrin.henkenherm\@tu-dortmund.de, anna.herdick\@tu-dortmund.de, tim.ritter@tu-dortmund.de , luca.sauer@tu-dortmund.de
 
 --------------------------------------------------------------------------------
 
@@ -90,6 +90,8 @@ Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammen
 Die Funktion erwartet die Eingabe zweier Vektoren von faktoriellen Daten und berechnet im Falle einer ordinalen Variable die Rangkorrelationskoeffizienten nach Spearman, Kendall und Goodman und Kruskal, im Falle einer nominalen Variable die Kontingenzkoeffizienten nach Yule, Phi, nach Cramér und nach Pearson, letzteren unkorrigiert und korrigiert. 
 
 #### deskr_d(x,y)
+Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammengang zwischen einer metrischen und einer dichotomen Variablen berechnet und ausgibt.
+x ist die dichotome Variable und y ist die metrische Variable.
 
 #### e(x,Ordnung=TRUE,...)
 Eine Funktion, die eine Variable (ordinal oder metrisch) quantilbasiert in die drei Kategorien "Niedrig", "Mittel" und "Hoch" einordnet. 
