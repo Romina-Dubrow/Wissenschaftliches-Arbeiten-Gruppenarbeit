@@ -5,7 +5,7 @@ Gruppenmitglieder:
 
 Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: leia.betting\@tu.dortmund.de, romina.dubrow\@tu-dortmund.de, kathrin.henkenherm\@tu-dortmund.de, anna.herdick\@tu-dortmund.de, tim.ritter@tu-dortmund.de , luca.sauer@tu-dortmund.de
+Kontakt: leia.betting@tu.dortmund.de, romina.dubrow@tu-dortmund.de, kathrin.henkenherm@tu-dortmund.de, anna.herdick@tu-dortmund.de, tim.ritter@tu-dortmund.de , luca.sauer@tu-dortmund.de
 
 --------------------------------------------------------------------------------
 
@@ -71,19 +71,24 @@ Beispiele:
 ``deskr(iris\$Sepal.Length)`` <br>
 ``deskr(c(NA, 1:10), na.rm = TRUE)``  (mit NA im Datenvektor und weitergereichtem Argument na.rm)
 
+-----
 
-#### deskr_kat(x,...): 
-Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt.
+#### ``deskr_kat(x,...)``
+Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt. <br>
+Die Funktion erwartet als Eingabe einen Faktor. Zusätzlich kann über das "..."-Argument der Umgang mit fehlenden Werten spezifiziert werden. Bei nominalen Merkmalen berechnet die Funktion den Modalwert und das Phi-Streuunngsmaß. Bei ordinalen Merkmalen werden der Modalwert, der Median, die 0, 0.25, 0.5, 0.75 und 1 Qunatile sowie das Phi-Streuungsmaß ausgegeben. <br>
 
 Beispiele:
 
-str(housing\$Freq) (Kardinal)<br>
-str(housing\$Sat)  (Ordinal) <br>
-str(housing\$Type) (Nominal)
+``library("MASS")`` <br>
+``str(housing$Freq)`` (Kardinal)<br>
+``str(housing$Sat)``  (Ordinal) <br>
+``str(housing$Type)`` (Nominal)
 
-deskr_kat(housing\$Freq)<br>
-deskr_kat(housing\$Sat)<br>
-deskr_kat(housing\$Type)<br>
+``deskr_kat(housing$Freq)``<br>
+``deskr_kat(housing$Sat)``<br>
+``deskr_kat(housing$Type)``<br>
+
+---
 
 #### zus_kat(x,y)
 Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet und ausgibt.
@@ -119,7 +124,7 @@ katVis(w,z)<br>
 
 ### Hilfsfunktionen:
 
-#### phi_str(x):
+#### ``phi_str(x,...)``
 Berechnet das Phi-Streuungsmaß für einen Faktor
 
 #### swap(x,y):

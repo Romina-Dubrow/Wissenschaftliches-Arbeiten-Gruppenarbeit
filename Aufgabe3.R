@@ -35,7 +35,7 @@ deskr_kat <- function(x, ...){
         p <- c("0%:  ", "25%: ", "50%: ", "75%: ", "100%:")
         cat("  ", p[i] , levels(x)[quantile(x, type=1, ...)[i]], "\n")
       }
-      cat("Phi-Streuungsmaß:", phi_str(x))
+      cat("Phi-Streuungsmaß:", phi_str(x,...))
     }
     else{                         ## Nominal
       

@@ -2,7 +2,7 @@
 
 ## Phi-Streuungsmaß:
 
-phi_str <- function(x){
+phi_str <- function(x,...){
   if(!is.factor(x)) stop("Funktion erwartet Faktor")
   
   ## Häufigkeitsverteilung der Levels:
@@ -10,7 +10,7 @@ phi_str <- function(x){
   hk <- numeric(K)
   l <- length(x)
   for (i in 1:K) {
-    s <- sum(x == levels(x)[i])
+    s <- sum(x == levels(x)[i], ...)
     hk[i] <- s/l
   }
   
