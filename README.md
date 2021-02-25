@@ -5,7 +5,7 @@ Gruppenmitglieder:
 
 Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer 
 
-Kontakt: leia.betting@tu.dortmund.de, romina.dubrow@tu-dortmund.de, kathrin.henkenherm@tu-dortmund.de, anna.herdick@tu-dortmund.de, tim.ritter@tu-dortmund.de , luca.sauer@tu-dortmund.de
+Kontakt: leia.betting@tu.dortmund.de, romina.dubrow@tu-dortmund.de, kathrin.henkenherm@tu-dortmund.de, anna.herdick@tu-dortmund.de, tim.ritter@tu-dortmund.de, luca.sauer@tu-dortmund.de
 
 --------------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 
 ### Dateienliste: <br>
 
-**Aufgabe1-Github.R**:    R-Skript zur Simulation eines Datensatzes von 100 Beobachtungen zu den Variablen _Alter_, _Studienfach_, _Interesse an Mathematik_, _Interesse an Programmieren_ und _Mathe-LK_. <br>
+**Aufgabe1.R**:    R-Skript zur Simulation eines Datensatzes von 100 Beobachtungen zu den Variablen _Alter_, _Studienfach_, _Interesse an Mathematik_, _Interesse an Programmieren_ und _Mathe-LK_. <br>
 
 **Aufgabe3.R**:          Funktionen zur deskriptiven Datenanalyse <br>  
 
@@ -64,12 +64,12 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 
 #### ``deskr(x,...)``
 Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt. <br>
-Die Funktion erwartet die Eingabe eines Vektors von metrischen Daten und berechnet dessen arithmetisches Mittel, den Median, die Varianz, die Standardabweichung, die Range, sowie die 0, 0.25, 0.5, 0.75 und 1 Quantile und gibt die Maßzahlen anschließend aus. Über das "..."-Argument kann beispielsweise mittels na.rm = TRUE der Umgang mit fehlenden Werten an die Funktionen der Maßzahlen durchgereicht werden.
+Die Funktion erwartet die Eingabe eines Vektors von metrischen Daten und berechnet dessen arithmetisches Mittel, den Median, die Varianz, die Standardabweichung, die Range, sowie die 0, 0.25, 0.5, 0.75 und 1 Quantile und gibt die Maßzahlen anschließend aus. Über das ``"..."``-Argument kann beispielsweise mittels ``na.rm = TRUE`` der Umgang mit fehlenden Werten an die Funktionen der Maßzahlen durchgereicht werden.
 
 Beispiele:
 
-``deskr(iris\$Sepal.Length)`` <br>
-``deskr(c(NA, 1:10), na.rm = TRUE)``  (mit NA im Datenvektor und weitergereichtem Argument na.rm)
+``deskr(iris$Sepal.Length)`` <br>
+``deskr(c(NA, 1:10), na.rm = TRUE)``  (mit NA im Datenvektor und weitergereichtem Argument ``na.rm``)
 
 -----
 
