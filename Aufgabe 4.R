@@ -66,3 +66,53 @@ katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Math
 ## mittleres Interesse an Mathe und gesteigertes Interesse an Prog spricht für Informatik, eher ohne Mathe-LK
 ## gleich großes Interesse an Mathe und Prog spricht für Data Science, eher ohne Mathe-LK
 
+
+deskr_kat(Studienfach)
+#Nominales Merkmal
+# Modalwert: Statistik 
+# Phi-Streuungsmaß: 0.8125
+
+## Statistik wird am häufigsten studiert. Die Studeinfächer sind nicht
+# gleichverteilt, es gibt jedoch eine hohe Streuung
+
+deskr_kat(Mathe.LK)
+#Nominales Merkmal
+# Modalwert: Ja 
+# Phi-Streuungsmaß: 0.98
+
+## Die meiste gaben an, dass sie Mathe LK hatten. Ob der Mathe LK belegt wurde
+# oder nicht scheint gleichverteilt zu sein.
+
+Intresse_Mathe <- ordered(Intersse.an.Mathematik)
+Intresse_Prog <- ordered(Intersse.an.Programmieren)
+
+deskr_kat(Intresse_Mathe)
+#Ordinales Merkmal
+# Modalwert: 5 
+# Median: 5 
+# Quantile: 
+#   0%:   1 
+#   25%:  3 
+#   50%:  5 
+#   75%:  5 
+#   100%: 7 
+# Phi-Streuungsmaß: 0.694051
+
+## Sowohl der Median als auch der Modalwert von Interesse an Mathematik liegen 
+# bei 5 von 7, auch das 75%-Quantil beträgt 5. Die Daten streuen mittel stark
+
+deskr_kat(Intresse_Prog)
+#Ordinales Merkmal
+# Modalwert: 4 
+# Median: 4 
+# Quantile: 
+#   0%:   1 
+#   25%:  3 
+#   50%:  4 
+#   75%:  6 
+#   100%: 7 
+# Phi-Streuungsmaß: 0.822884
+
+## Der Median und Modalwert von Intresse an Programmieren betragen 4, welches
+# unter den Werten von Intresse an Mathematik liegt. Die Daten streuen hier 
+# deutlich stärker als bei den Daten zur Intresse an Mathematik
