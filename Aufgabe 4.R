@@ -66,6 +66,25 @@ katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Math
 ## mittleres Interesse an Mathe und gesteigertes Interesse an Prog spricht für Informatik, eher ohne Mathe-LK
 ## gleich großes Interesse an Mathe und Prog spricht für Data Science, eher ohne Mathe-LK
 
+deskr(Alter)
+# Deskriptive Statistiken: 
+# ------------------------
+# Arithm. Mittel: 25.06 
+# Median: 25 
+# Varianz: 5.289293 
+# Std.abw.: 2.299846 
+# Range: 20 32 
+# Quantile: 
+#   0%:   20 
+#   25%:  23.5 
+#   50%:  25 
+#   75%:  26.5 
+#   100%: 32 
+# ------------------------
+
+## Die Studierenden sind 20 bis 32 Jahre alt, bei einem Durchschnittsalter von 
+# ca. 25. Die Standardabweichung beträgt ungefähr 2.3.
+
 
 deskr_kat(Studienfach)
 #Nominales Merkmal
