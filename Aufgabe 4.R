@@ -34,6 +34,80 @@ for (i in 1:4) {
   print("Programmierinteresse")
   e(Fach[[i]]$Intersse.an.Programmieren)
 }
+# Studienfach                              Studienfach
+  # Data Science                             Data Science
+  # Mathematikinteresse                      Programmierinteresse
+  # Quantilbasierte Kategorisierung:         Quantilbasierte Kategorisierung:
+  # ------------------------                 ------------------------
+  #  Niedrig: 1 2                             Niedrig: 2 3   
+  # Mittel: 3 4                               Mittel: 4 5
+  # Hoch: 5 6                                 Hoch: 6 7 
+  # ------------------------                  ------------------------
+  
+  ## Mathematikinteresse: sehr stark nicht angegeben, ansonsten alles gleichmaessig verteilt
+  ## Programmierinteresse: sehr gering nicht angegeben, ansonsten alles gleichmaessig verteilt.
+  # Interpretation: Interesse variiert stark zwischen den Studenten. 
+  #                 In der Data Science wird viel programmiert also waere geringes Programmierinteresse von Nachteil
+  #                 Bei einem sehr hohen Mathematikinteresse studiert man vielleicht eher Statistik als Data Science?
+    
+   
+  #Studienfach                               Studienfach
+  #Informatik                                Informatik
+  #Mathematikinteresse                       Programmierinteresse
+  #Quantilbasierte Kategorisierung:          Quantilbasierte Kategorisierung: 
+  # ------------------------                  ------------------------
+  # Niedrig: 2 3                              Niedrig: 4 5 
+  # Mittel:                                   Mittel: 6 
+  # Hoch: 4 5                                 Hoch: 7 
+  #------------------------                   ------------------------
+    
+  
+  ## Mathematikinteresse: keine starken Auspraegungen (1,6,7) also alle Befragten geben an mittleres Mathematikinteresse zu haben
+  ## Weder besonders hoch noch besonders niedrig
+  ## Programmierinteresse: keine geringen Auspraegungen (1,2,3), also ein niedriges Programmierinteresse ist unter Informatikstudierenden
+  #  schon 4,5 (Bei Gleichverteilung wäre das aber schon mittel bis hoch), 75% geben hier an ein sehr hohes Programmierinteresse zu haben
+  #  also 6 oder 7. 
+  #  Interpretation: Fuer den Studiengang Informatik braucht man ein hohes Programmierinteresse. Also ergibt das schon Sinn.
+  #                  Mathematikinteresse scheint in diesem Fall nicht unbedingt von Noeten zu sein.
+  
+  
+  #Studienfach                               Studienfach
+  #Mathematik                                Mathematik
+  #Mathematikinteresse                       Programmierinteresse
+  #Quantilbasierte Kategorisierung:          Quantilbasierte Kategorisierung: 
+  # ------------------------                  ------------------------
+  # Niedrig: 3 5                             Niedrig: 1 
+  # Mittel:                                  Mittel: 2 3
+  # Hoch: 6 7                                Hoch: 4
+  #------------------------                   ------------------------
+  
+  
+ 
+  ## Mathematikinteresse: Hauptsaechlich hohes Interesse. 3 (also bei Gleichverteilung fast mittleres Interesse) ist hier
+  #                       als geringster Wert angegeben. 
+  ## Programmierinteresse:  kleiner 5, die meisten haben 2,3 also eher niedriges Programmierinteresse
+  ## Interpretation: Fuer ein Mathematikstudium ist Interesse in diesem Bereich natuerlich von Vorteil 
+  #                  deshalb sind die Werte auch so hoch
+  #                  Programmierinteresse braucht man als Mathestudent nicht unbedingt, nur wenn man 
+  #                  Informatik als Nebenfach nehmen sollte (Aber es scheint so als waere das hier nicht beachtet worden)
+   
+  #Studienfach                               Studienfach
+  #Statistik                                 Statistik
+  #Mathematikinteresse                       Programmierinteresse
+  #Quantilbasierte Kategorisierung:          Quantilbasierte Kategorisierung: 
+  # ------------------------                  ------------------------
+  # Niedrig: 3 4                             Niedrig: 2 3
+  # Mittel: 5                                Mittel: 4
+  # Hoch: 6 7                                Hoch: 5 6
+  #------------------------                   ------------------------   
+  
+  
+  ## Mathematikinteresse: Schwaches Interesse gibt es nicht. Ansonsten ist das Interesse relativ gleichmaessig verteilt
+  ## Programmierinteresse: Sehr starkes/schwaches Interesse gibt es nicht. Ansonsten gleichmaessig verteilt
+  # Interpretation: Statistikstudenten haben mindestens mittleres Interesse an Mathematik. Im Studiengang braucht man das auch.
+  #                 Programmierinteresse variiert relativ stark und ist weder extrem stark noch schwach, Programmierung wird benoetigt, 
+  #                 aber ist nicht der groesste Teil des Studiums. (Aber auch hier kann man Informatik als Nebenfach waehlen)
+
 
 ## Mathe LK (ja/nein) und Interesse:
 LK <- split(Daten,Daten$Mathe.LK)
@@ -47,6 +121,42 @@ for (i in 1:2) {
   print("Programmierinteresse")
   e(LK[[i]]$Intersse.an.Programmieren)
 }
+#Mathe LK?                                  Mathe LK?
+ # Ja                                        Ja
+ # Mathematikinteresse                       Programmierinteresse
+ # Quantilbasierte Kategorisierung:          Quantilbasierte Kategorisierung:
+ #  ------------------------                  ------------------------
+ # Niedrig: 2 3 4                             Niedrig: 1 2 3 
+ # Mittel: 5                                  Mittel: 4 
+ #Hoch: 6 7                                   Hoch: 5 6 7 
+ # ------------------------                   ------------------------
+  
+  #Mathematikinteresse: Kein sehr geringes Interesse, Hohes Mathematikinteresse tritt haeufiger auf
+  #Programmierinteresse: Sehr gleichmaeßig verteilt wie bei einer Gleichverteilung
+  # Interpretation: Menschen mit Mathe LK haben auch hoeheres Interesse an Mathematik, Programmierinteresse scheint
+  #                 keine Abhaengigkeit zu haben
+  
+    
+  #Mathe LK?                                  Mathe LK?
+  # Nein                                      Nein
+  # Mathematikinteresse                       Programmierinteresse
+  # Quantilbasierte Kategorisierung:          Quantilbasierte Kategorisierung:
+  #  ------------------------                  ------------------------
+  # Niedrig: 1 2 3                            Niedrig: 2 3 
+  # Mittel: 4                                 Mittel: 4 5
+  # Hoch: 5                                   Hoch:  6 7 
+  # ------------------------                   ------------------------  
+ 
+
+#Mathematikinteresse: Das hoechste Interesse ist hier 5
+#                     Schwaches Interesse kommt sehr haeufig vor
+#Programmierinteresse: kein sehr niedriges programmierinteresse. Sonst überall ungefähr gleichviel
+# Interpretation: Menschen, ohne Mathe-LK haben haeufig kein hohes Interesse an Mathematik (sonst haetten sie ja Mathe LK gewaehlt)
+#                 Man hat ein etwas hoeheres Programmierinteresse wenn man keinen Mathe Lk hat, als wenn man Mathe LK hat?
+ 
+
+
+
 
 # Visualisierung
 katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Mathe.LK)
