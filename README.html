@@ -378,7 +378,7 @@ summary {
 <p>Gruppenarbeit GitHub Repository Wissenschaftliches Arbeiten <br> Einführung:</p>
 <p>Gruppenmitglieder:</p>
 <p>Leia Betting, Romina Dubrow, Kathrin Henkenherm, Anna Herdick, Tim Ritter und Luca Sauer</p>
-<p>Kontakt: <a href="mailto:leia.betting@tu.dortmund.de" class="email">leia.betting@tu.dortmund.de</a>, <a href="mailto:romina.dubrow@tu-dortmund.de" class="email">romina.dubrow@tu-dortmund.de</a>, <a href="mailto:kathrin.henkenherm@tu-dortmund.de" class="email">kathrin.henkenherm@tu-dortmund.de</a>, <a href="mailto:anna.herdick@tu-dortmund.de" class="email">anna.herdick@tu-dortmund.de</a>, <a href="mailto:tim.ritter@tu-dortmund.de" class="email">tim.ritter@tu-dortmund.de</a> , <a href="mailto:luca.sauer@tu-dortmund.de" class="email">luca.sauer@tu-dortmund.de</a></p>
+<p>Kontakt: <a href="mailto:leia.betting@tu.dortmund.de" class="email">leia.betting@tu.dortmund.de</a>, <a href="mailto:romina.dubrow@tu-dortmund.de" class="email">romina.dubrow@tu-dortmund.de</a>, <a href="mailto:kathrin.henkenherm@tu-dortmund.de" class="email">kathrin.henkenherm@tu-dortmund.de</a>, <a href="mailto:anna.herdick@tu-dortmund.de" class="email">anna.herdick@tu-dortmund.de</a>, <a href="mailto:tim.ritter@tu-dortmund.de" class="email">tim.ritter@tu-dortmund.de</a>, <a href="mailto:luca.sauer@tu-dortmund.de" class="email">luca.sauer@tu-dortmund.de</a></p>
 <hr />
 <div id="aktueller-status" class="section level3">
 <h3>Aktueller Status: <br></h3>
@@ -404,7 +404,7 @@ R Studio 1.2.5042 R 4.0.3</p>
 </div>
 <div id="dateienliste" class="section level3">
 <h3>Dateienliste: <br></h3>
-<p><strong>Aufgabe1-Github.R</strong>: R-Skript zur Simulation eines Datensatzes von 100 Beobachtungen zu den Variablen <em>Alter</em>, <em>Studienfach</em>, <em>Interesse an Mathematik</em>, <em>Interesse an Programmieren</em> und <em>Mathe-LK</em>. <br></p>
+<p><strong>Aufgabe1.R</strong>: R-Skript zur Simulation eines Datensatzes von 100 Beobachtungen zu den Variablen <em>Alter</em>, <em>Studienfach</em>, <em>Interesse an Mathematik</em>, <em>Interesse an Programmieren</em> und <em>Mathe-LK</em>. <br></p>
 <p><strong>Aufgabe3.R</strong>: Funktionen zur deskriptiven Datenanalyse <br></p>
 <p><strong>Datensatz.csv</strong>: Datensatz aus Aufgabe 1 in csv Format <br></p>
 <p><strong>Hilfsfunktionen.R</strong>: Verschiedene Hilfsfunktionen für Aufgabe 3<br></p>
@@ -414,37 +414,40 @@ R Studio 1.2.5042 R 4.0.3</p>
 <h3>Funktionen:</h3>
 <div id="deskrx..." class="section level4">
 <h4><code>deskr(x,...)</code></h4>
-<p>Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt. <br> Die Funktion erwartet die Eingabe eines Vektors von metrischen Daten und berechnet dessen arithmetisches Mittel, den Median, die Varianz, die Standardabweichung, die Range, sowie die 0, 0.25, 0.5, 0.75 und 1 Quantile und gibt die Maßzahlen anschließend aus. Über das “…”-Argument kann beispielsweise mittels na.rm = TRUE der Umgang mit fehlenden Werten an die Funktionen der Maßzahlen durchgereicht werden.</p>
+<p>Eine Funktion, die verschiedene geeignete deskriptive Statistiken für metrische Variablen berechnet und ausgibt. <br> Die Funktion erwartet die Eingabe eines Vektors von metrischen Daten und berechnet dessen arithmetisches Mittel, den Median, die Varianz, die Standardabweichung, die Range, sowie die 0, 0.25, 0.5, 0.75 und 1 Quantile und gibt die Maßzahlen anschließend aus. Über das <code>&quot;...&quot;</code>-Argument kann beispielsweise mittels <code>na.rm = TRUE</code> der Umgang mit fehlenden Werten an die Funktionen der Maßzahlen durchgereicht werden.</p>
 <p>Beispiele:</p>
-<p><code>deskr(iris\$Sepal.Length)</code> <br> <code>deskr(c(NA, 1:10), na.rm = TRUE)</code> (mit NA im Datenvektor und weitergereichtem Argument na.rm)</p>
+<p><code>deskr(iris$Sepal.Length)</code> <br> <code>deskr(c(NA, 1:10), na.rm = TRUE)</code> (mit NA im Datenvektor und weitergereichtem Argument <code>na.rm</code>)</p>
 <hr />
 </div>
 <div id="deskr_katx..." class="section level4">
 <h4><code>deskr_kat(x,...)</code></h4>
-<p>Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt. <br> Die Funktion erwartet als Eingabe einen Faktor. Zusätzlich kann über das “…”-Argument der Umgang mit fehlenden Werten spezifiziert werden. Bei nominalen Merkmalen berechnet die Funktion den Modalwert und das Phi-Streuunngsmaß. Bei ordinalen Merkmalen werden der Modalwert, der Median, die 0, 0.25, 0.5, 0.75 und 1 Qunatile sowie das Phi-Streuungsmaß ausgegeben. <br></p>
+<p>Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt. <br> Die Funktion erwartet als Eingabe einen Faktor. Zusätzlich kann über das <code>&quot;...&quot;</code>-Argument der Umgang mit fehlenden Werten spezifiziert werden. Bei nominalen Merkmalen berechnet die Funktion den Modalwert und das Phi-Streuunngsmaß. Bei ordinalen Merkmalen werden der Modalwert, der Median, die 0, 0.25, 0.5, 0.75 und 1 Qunatile sowie das Phi-Streuungsmaß ausgegeben. <br></p>
 <p>Beispiele:</p>
 <p><code>library(&quot;MASS&quot;)</code> <br> <code>str(housing$Freq)</code> (Kardinal)<br> <code>str(housing$Sat)</code> (Ordinal) <br> <code>str(housing$Type)</code> (Nominal)</p>
 <p><code>deskr_kat(housing$Freq)</code><br> <code>deskr_kat(housing$Sat)</code><br> <code>deskr_kat(housing$Type)</code><br></p>
 <hr />
 </div>
 <div id="zus_katxy" class="section level4">
-<h4>zus_kat(x,y)</h4>
+<h4><code>zus_kat(x,y)</code></h4>
 <p>Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet und ausgibt. Die Funktion erwartet die Eingabe zweier Vektoren von faktoriellen Daten und berechnet im Falle einer ordinalen Variable die Rangkorrelationskoeffizienten nach Spearman, Kendall und Goodman und Kruskal, im Falle einer nominalen Variable die Kontingenzkoeffizienten nach Yule, Phi, nach Cramér und nach Pearson, letzteren unkorrigiert und korrigiert.</p>
+<hr />
 </div>
 <div id="deskr_dxy" class="section level4">
-<h4>deskr_d(x,y)</h4>
+<h4><code>deskr_d(x,y)</code></h4>
 <p>Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammengang zwischen einer metrischen und einer dichotomen Variablen berechnet und ausgibt. x ist die dichotome Variable und y ist die metrische Variable.</p>
+<hr />
 </div>
-<div id="exordnungtrue" class="section level4">
-<h4>e(x,Ordnung=TRUE,…)</h4>
-<p>Eine Funktion, die eine Variable (ordinal oder metrisch) quantilbasiert in die drei Kategorien “Niedrig”, “Mittel” und “Hoch” einordnet. Die Funktion erwartet die Variable als Argument x, die den Datentyp character, factor, numeric oder integer hat. Wenn x nicht den Datentyp Faktor beinhaltet, wird die Variable in einen geordneten Faktor umgewandelt. Wenn der Faktor noch nicht geordnet ist, kann man zusätzlich das Argument Ordnung=FALSE angeben. Dann kann mit dem Argument ord die gewünschte Ordnung des Faktors angegeben werden und die Variable x wird mit der Hilfsfunktion Faktor_ordnen(x,ord) in einen geordneten Faktor umgewandelt.</p>
-<p>Beispiel: <br> e(Cars93<span class="math inline">\(Cylinders,Ordnung = FALSE, ord = levels(Cars93\)</span>Cylinders))</p>
+<div id="exordnungtrue..." class="section level4">
+<h4><code>e(x,Ordnung=TRUE,...)</code></h4>
+<p>Eine Funktion, die eine Variable (ordinal oder metrisch) quantilbasiert in die drei Kategorien “Niedrig”, “Mittel” und “Hoch” einordnet. Die Funktion erwartet die Variable als Argument x, die den Datentyp character, factor, numeric oder integer hat. Wenn x nicht den Datentyp Faktor beinhaltet, wird die Variable in einen geordneten Faktor umgewandelt. Wenn der Faktor noch nicht geordnet ist, kann man zusätzlich das Argument Ordnung=FALSE angeben. Dann kann mit dem Argument ord die gewünschte Ordnung des Faktors angegeben werden und die Variable x wird mit der Hilfsfunktion <code>Faktor_ordnen(x,ord)</code> in einen geordneten Faktor umgewandelt.</p>
+<p>Beispiel: <br> <code>e(Cars93$Cylinders,Ordnung = FALSE, ord = levels(Cars93$Cylinders))</code></p>
+<hr />
 </div>
 <div id="katvisxyzwnull" class="section level4">
-<h4>katVis(x,y,z,w=NULL):</h4>
+<h4><code>katVis(x,y,z,w=NULL)</code></h4>
 <p>Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt. <br> Die Funktion erwartet als Eingabe drei oder vier Vektoren der gleichen Länge, die in einem Streudiagramm mittels ggplot2-Funktionen dargestellt werden. Dabei werden die Eingaben so sortiert, dass die Variable mit der geringsten Anzahl Kategorien an letzter Stelle steht, sodass sie, bei drei Eingaben, die Farbe der Punkte bestimmt und bei vier Eingaben die Form der Punkte. Die Punkte werden zusätzlich zur besseren Erkennbarkeit leicht um die eigentlichen Werte gestreut. Für das Vertauschen der Eingaben wird die Hilfsfunktion swap verwendet.</p>
-<p>Beispiele:<br> x &lt;- factor(sample(rep(letters[1:4], 10), 30))<br> y &lt;- ordered(sample(rep(1:7, 10), 30))<br> z &lt;- ordered(sample(rep(1:7, 10), 30))<br> w &lt;- factor(sample(rep(0:1, 100), 30))<br></p>
-<p>katVis(x,y,z,w)<br> katVis(x,y,z)<br> katVis(w,y,z,x)<br> katVis(w,z)<br></p>
+<p>Beispiele:<br> <code>x &lt;- factor(sample(rep(letters[1:4], 10), 30))</code><br> <code>y &lt;- ordered(sample(rep(1:7, 10), 30))</code><br> <code>z &lt;- ordered(sample(rep(1:7, 10), 30))</code><br> <code>w &lt;- factor(sample(rep(0:1, 100), 30))</code><br></p>
+<p><code>katVis(x,y,z,w)</code><br> <code>katVis(x,y,z)</code><br> <code>katVis(w,y,z,x)</code><br> <code>katVis(w,z)</code><br></p>
 <hr />
 </div>
 </div>
@@ -453,41 +456,50 @@ R Studio 1.2.5042 R 4.0.3</p>
 <div id="phi_strx..." class="section level4">
 <h4><code>phi_str(x,...)</code></h4>
 <p>Berechnet das Phi-Streuungsmaß für einen Faktor</p>
+<hr />
 </div>
 <div id="swapxy" class="section level4">
-<h4>swap(x,y):</h4>
+<h4><code>swap(x,y)</code></h4>
 <p>Vertauscht die Werte der Variable x mit denen der Variable y</p>
+<hr />
 </div>
 <div id="faktor_ordnenxord" class="section level4">
-<h4>Faktor_ordnen(x,ord)</h4>
+<h4><code>Faktor_ordnen(x,ord)</code></h4>
+<hr />
 </div>
 <div id="nullxy" class="section level4">
-<h4>null(x,y)</h4>
+<h4><code>null(x,y)</code></h4>
 <p>Diese Funktion überprüft für eine Kontingenztafel, ob eine Nullzeile vorhanden ist, da dies ein Ausschlusskriterium für die Berechnung des Yule-Koeffizienten ist.</p>
+<hr />
 <p>Kontingenzkoeffizienten für nominale Daten:</p>
 </div>
 <div id="phixy" class="section level4">
-<h4>phi(x,y)</h4>
+<h4><code>phi(x,y)</code></h4>
 <p>Phi-Koeffizient</p>
+<hr />
 </div>
 <div id="chixy" class="section level4">
-<h4>chi(x,y)</h4>
+<h4><code>chi(x,y)</code></h4>
 <p>Chi^2-Koeffizient</p>
+<hr />
 </div>
 <div id="cramerxy" class="section level4">
-<h4>cramer(x,y)</h4>
+<h4><code>cramer(x,y)</code></h4>
 <p>Cramérs Kontingenzindex</p>
+<hr />
 </div>
 <div id="pearsxy" class="section level4">
-<h4>pears(x,y)</h4>
+<h4><code>pears(x,y)</code></h4>
 <p>Pearsons Kontingenzindex</p>
+<hr />
 </div>
 <div id="pears.korrxy" class="section level4">
-<h4>pears.korr(x,y)</h4>
+<h4><code>pears.korr(x,y)</code></h4>
 <p>korrigierter Pearson Index</p>
+<hr />
 </div>
 <div id="yulexy" class="section level4">
-<h4>yule(x,y)</h4>
+<h4><code>yule(x,y)</code></h4>
 <p>Kontingenzkoeffizient nach Yule</p>
 </div>
 </div>

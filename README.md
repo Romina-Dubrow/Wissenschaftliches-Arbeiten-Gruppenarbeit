@@ -75,7 +75,7 @@ Beispiele:
 
 #### ``deskr_kat(x,...)``
 Eine Funktion, die verschiedene geeignete deskriptive Statistiken für kategoriale Variablen berechnet und ausgibt. <br>
-Die Funktion erwartet als Eingabe einen Faktor. Zusätzlich kann über das "..."-Argument der Umgang mit fehlenden Werten spezifiziert werden. Bei nominalen Merkmalen berechnet die Funktion den Modalwert und das Phi-Streuunngsmaß. Bei ordinalen Merkmalen werden der Modalwert, der Median, die 0, 0.25, 0.5, 0.75 und 1 Qunatile sowie das Phi-Streuungsmaß ausgegeben. <br>
+Die Funktion erwartet als Eingabe einen Faktor. Zusätzlich kann über das ``"..."``-Argument der Umgang mit fehlenden Werten spezifiziert werden. Bei nominalen Merkmalen berechnet die Funktion den Modalwert und das Phi-Streuunngsmaß. Bei ordinalen Merkmalen werden der Modalwert, der Median, die 0, 0.25, 0.5, 0.75 und 1 Qunatile sowie das Phi-Streuungsmaß ausgegeben. <br>
 
 Beispiele:
 
@@ -90,35 +90,41 @@ Beispiele:
 
 ---
 
-#### zus_kat(x,y)
+#### ``zus_kat(x,y)``
 Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammenhang zwischen zwei kategorialen Variablen berechnet und ausgibt.
 Die Funktion erwartet die Eingabe zweier Vektoren von faktoriellen Daten und berechnet im Falle einer ordinalen Variable die Rangkorrelationskoeffizienten nach Spearman, Kendall und Goodman und Kruskal, im Falle einer nominalen Variable die Kontingenzkoeffizienten nach Yule, Phi, nach Cramér und nach Pearson, letzteren unkorrigiert und korrigiert. 
 
-#### deskr_d(x,y)
+---
+
+#### ``deskr_d(x,y)``
 Eine Funktion, die geeignete deskriptive bivariate Statistiken für den Zusammengang zwischen einer metrischen und einer dichotomen Variablen berechnet und ausgibt.
 x ist die dichotome Variable und y ist die metrische Variable.
 
-#### e(x,Ordnung=TRUE,...)
+---
+
+#### ``e(x,Ordnung=TRUE,...)``
 Eine Funktion, die eine Variable (ordinal oder metrisch) quantilbasiert in die drei Kategorien "Niedrig", "Mittel" und "Hoch" einordnet. 
-Die Funktion erwartet die Variable als Argument x, die den Datentyp character, factor, numeric oder integer hat. Wenn x nicht den Datentyp Faktor beinhaltet, wird die Variable in einen geordneten Faktor umgewandelt. Wenn der Faktor noch nicht geordnet ist, kann man zusätzlich das Argument Ordnung=FALSE angeben. Dann kann mit dem Argument ord die gewünschte Ordnung des Faktors angegeben werden und die Variable x wird mit der Hilfsfunktion Faktor_ordnen(x,ord) in einen geordneten Faktor umgewandelt.
+Die Funktion erwartet die Variable als Argument x, die den Datentyp character, factor, numeric oder integer hat. Wenn x nicht den Datentyp Faktor beinhaltet, wird die Variable in einen geordneten Faktor umgewandelt. Wenn der Faktor noch nicht geordnet ist, kann man zusätzlich das Argument Ordnung=FALSE angeben. Dann kann mit dem Argument ord die gewünschte Ordnung des Faktors angegeben werden und die Variable x wird mit der Hilfsfunktion ``Faktor_ordnen(x,ord)`` in einen geordneten Faktor umgewandelt.
 
 Beispiel: <br>
-e(Cars93$Cylinders,Ordnung = FALSE, ord = levels(Cars93$Cylinders)) 
+``e(Cars93$Cylinders,Ordnung = FALSE, ord = levels(Cars93$Cylinders))``
 
-#### katVis(x,y,z,w=NULL):
+---
+
+#### ``katVis(x,y,z,w=NULL)``
 Eine Funktion, die eine geeignete Visualisierung von drei oder vier kategorialen Variablen erstellt. <br>
 Die Funktion erwartet als Eingabe drei oder vier Vektoren der gleichen Länge, die in einem Streudiagramm mittels ggplot2-Funktionen dargestellt werden. Dabei werden die Eingaben so sortiert, dass die Variable mit der geringsten Anzahl Kategorien an letzter Stelle steht, sodass sie, bei drei Eingaben, die Farbe der Punkte bestimmt und bei vier Eingaben die Form der Punkte. Die Punkte werden zusätzlich zur besseren Erkennbarkeit leicht um die eigentlichen Werte gestreut. Für das Vertauschen der Eingaben wird die Hilfsfunktion swap verwendet.
 
 Beispiele:<br>
-x <- factor(sample(rep(letters[1:4], 10), 30))<br>
-y <- ordered(sample(rep(1:7, 10), 30))<br>
-z <- ordered(sample(rep(1:7, 10), 30))<br>
-w <- factor(sample(rep(0:1, 100), 30))<br>
+``x <- factor(sample(rep(letters[1:4], 10), 30))``<br>
+``y <- ordered(sample(rep(1:7, 10), 30))``<br>
+``z <- ordered(sample(rep(1:7, 10), 30))``<br>
+``w <- factor(sample(rep(0:1, 100), 30))``<br>
 
-katVis(x,y,z,w)<br>
-katVis(x,y,z)<br>
-katVis(w,y,z,x)<br>
-katVis(w,z)<br>
+``katVis(x,y,z,w)``<br>
+``katVis(x,y,z)``<br>
+``katVis(w,y,z,x)``<br>
+``katVis(w,z)``<br>
 
 --------------------------------------------------------------------------------
 
@@ -127,33 +133,50 @@ katVis(w,z)<br>
 #### ``phi_str(x,...)``
 Berechnet das Phi-Streuungsmaß für einen Faktor
 
-#### swap(x,y):
+---
+
+#### ``swap(x,y)``
 Vertauscht die Werte der Variable x mit denen der Variable y
 
-#### Faktor_ordnen(x,ord)
+---
 
-#### null(x,y)
-Diese Funktion überprüft für eine Kontingenztafel, ob eine Nullzeile vorhanden ist, 
-da dies ein Ausschlusskriterium für die Berechnung des Yule-Koeffizienten ist.
+#### ``Faktor_ordnen(x,ord)``
+
+---
+
+#### ``null(x,y)``
+Diese Funktion überprüft für eine Kontingenztafel, ob eine Nullzeile vorhanden ist, da dies ein Ausschlusskriterium für die Berechnung des Yule-Koeffizienten ist.
+
+---
 
 Kontingenzkoeffizienten für nominale Daten: 
 
-#### phi(x,y)
+#### ``phi(x,y)``
 Phi-Koeffizient
 
-#### chi(x,y)
+---
+
+#### ``chi(x,y)``
 Chi^2-Koeffizient
 
-#### cramer(x,y)
+---
+
+#### ``cramer(x,y)``
 Cramérs Kontingenzindex
 
-#### pears(x,y)
+---
+
+#### ``pears(x,y)``
 Pearsons Kontingenzindex
 
-#### pears.korr(x,y)
+---
+
+#### ``pears.korr(x,y)``
 korrigierter Pearson Index
 
-#### yule(x,y)
+---
+
+#### ``yule(x,y)``
 Kontingenzkoeffizient nach Yule
 
 
