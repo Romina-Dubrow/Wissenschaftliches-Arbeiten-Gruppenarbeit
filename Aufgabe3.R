@@ -70,13 +70,13 @@ deskr_kat(housing$Type)
 
 
 # alle kategoriellen Daten muessen hierfuer Faktoren und ordinale Daten zusaetzlich
-# bereits richtig in R geordnet sein
+# bereits richtig in R geordnet sein (kann mithilfe der Hilfsfunktion Faktor_ordnen() manuell geschehen
 
 
 
 zus_kat <- function(x, y){
   if(is.factor(x) && is.factor(y)){               ## Ist Eingabe ein Faktor?
-    if(is.ordered(x) && is.ordered(y)){           ## Ordinal
+    if(is.ordered(x) && is.ordered(y)){           ## Ordinale Daten
       library(GoodmanKruskal)             
       x <- as.numeric(x)
       y <- as.numeric(y)
@@ -86,7 +86,7 @@ zus_kat <- function(x, y){
           "\n ...Kendall:", cor(x,y, method = "kendall"), 
           "\n ...Goodman und Kruskal:", GKtau(x,y)$tauxy, "\n")
     }
-    else{                                         ## Nominal
+    else{                                         ## Nominale Daten
       cat("Nominales Merkmal:\n",
           "Kontingenzkoeffizienten...\n")
       if(length(levels(x)) == 2 && length(levels(y)) == 2){     ## beide dichotom?
