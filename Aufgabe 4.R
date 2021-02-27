@@ -359,3 +359,18 @@ deskr_d(Mathe.LK, Intersse.an.Programmieren)
 ## sehr große Streuung bei beiden Gruppen
 ## bei Mathe-LK==nein ist der Interquartilsabstand 6-3=3 größer als bei ja mit 5-3=2
 
+
+# Fazit:
+# Die Studierenden im Datensatz sind 20 bis 32 Jahre alt
+# Durchschnitt 25, Standardabweichung 2.3
+# Studienfaecher sind nicht gleichverteilt. Statistik tritt am haeufigsten auf. 
+# Mehr Studierende hatten Mathe LK. Das arrithmetische Mittel und der Median des Alters bei Studierenden, die Mathe LK hatten ist
+# aehnlich zu dem der Studierenden, die keinen Mathe LK hatten. 
+# Trotzdem streut das Alter bei den Studierenden ohne Mathe LK staerker
+# Mathematikinteresse war im Median 5 und im Modalwert 7.
+# Studierende, die Mathe LK hatten haben ein hoeheres Mathemikinteresse.
+# Studierende mit Mathe LK hatten ein gleichverteiltes Programmierinteresse (scheint keinen Zusammenhang zu haben)
+# Programmierinteresse ist bei Studierenden ohne Mathe-LK staerker als bei Studierenden mit Mathe LK
+# Mathematikinteresse nach Studienfaechern: Mathe > Statistik > Data Science > Informatik
+# Programmierinteresse nach Studienfaechern: Informatik > Data Science > Statistik > Mathe
+
