@@ -157,11 +157,6 @@ Phi-Koeffizient
 
 ---
 
-#### ``chi(x,y)``
-Chi^2-Koeffizient
-
----
-
 #### ``cramer(x,y)``
 Cramérs Kontingenzindex
 
