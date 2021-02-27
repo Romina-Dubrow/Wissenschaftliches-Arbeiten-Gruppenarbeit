@@ -6,15 +6,15 @@
 ## für metrische Variablen berechnet und ausgibt
 
 deskr <- function(x, ...){
-  cat(" Deskriptive Statistiken: \n",
+  cat(" Deskriptive Statistiken: \n",    
   "------------------------\n",
-  "Arithm. Mittel:", mean(x, ...), "\n",
-  "Median:", median(x, ...), "\n",
+  "Arithm. Mittel:", mean(x, ...), "\n",    ## Jeweils benannte Ausgabe der Masszahlen auf die Konsole
+  "Median:", median(x, ...), "\n",          ## abgetrennt durch Zeilenumbruch
   "Varianz:", var(x, ...), "\n",
   "Std.abw.:", sd(x, ...), "\n",
   "Range:", range(x, ...), "\n",
   "Quantile: \n")
-  for(i in 1:5){
+  for(i in 1:5){                            ## for-Schleife, um die Quantile jeweils mit richtiger Benennung auszugeben
     p <- c("0%:  ", "25%: ", "50%: ", "75%: ", "100%:")
     cat("  ", p[i] , quantile(x, type = 2, ...)[i], "\n")
   }
