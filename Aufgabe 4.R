@@ -367,7 +367,8 @@ deskr_d(Mathe.LK, Intersse.an.Programmieren)
 # Mehr Studierende hatten Mathe LK. Das arrithmetische Mittel und der Median des Alters bei Studierenden, die Mathe LK hatten ist
 # aehnlich zu dem der Studierenden, die keinen Mathe LK hatten. 
 # Trotzdem streut das Alter bei den Studierenden ohne Mathe LK staerker
-# Mathematikinteresse war im Median 5 und im Modalwert 7.
+# Mathematikinteresse war im Median und Modalwert 5, Programmierinteresse 4
+# Programmierinteresse streut stärker als Mathematikinteresse
 # Studierende, die Mathe LK hatten haben ein hoeheres Mathemikinteresse.
 # Studierende mit Mathe LK hatten ein gleichverteiltes Programmierinteresse (scheint keinen Zusammenhang zu haben)
 # Programmierinteresse ist bei Studierenden ohne Mathe-LK staerker als bei Studierenden mit Mathe LK
