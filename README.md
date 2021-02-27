@@ -141,7 +141,7 @@ Vertauscht die Werte der Variable x mit denen der Variable y
 ---
 
 #### ``Faktor_ordnen(x,ord)``
-
+Funktion, die es ermöglicht einen ungeordneten Faktor x nach der Reihenfolge des Vektors ord zu ordnen.
 ---
 
 #### ``null(x,y)``
