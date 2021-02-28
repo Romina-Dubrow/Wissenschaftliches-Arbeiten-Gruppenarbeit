@@ -27,15 +27,15 @@ deskr(Alter)
 deskr_kat(Studienfach)
 #Nominales Merkmal
 # Modalwert: Statistik 
-# Phi-Streuungsmaß: 0.8125
+# Phi-Streuungsmass: 0.8125
 
-## Statistik wird am häufigsten studiert. Die Studeinfächer sind nicht
+## Statistik wird am haeufigsten studiert. Die Studeinfaecher sind nicht
 # gleichverteilt, es gibt jedoch eine hohe Streuung
 
 deskr_kat(Mathe.LK)
 #Nominales Merkmal
 # Modalwert: Ja 
-# Phi-Streuungsmaß: 0.98
+# Phi-Streuungsmass: 0.98
 
 ## Die meiste gaben an, dass sie Mathe LK hatten. Ob der Mathe LK belegt wurde
 # oder nicht scheint gleichverteilt zu sein.
@@ -53,10 +53,10 @@ deskr_kat(Intresse_Mathe)
 #   50%:  5 
 #   75%:  5 
 #   100%: 7 
-# Phi-Streuungsmaß: 0.694051
+# Phi-Streuungsmass: 0.694051
 
 ## Sowohl der Median als auch der Modalwert von Interesse an Mathematik liegen 
-# bei 5 von 7, auch das 75%-Quantil beträgt 5. Die Daten streuen mittel stark
+# bei 5 von 7, auch das 75%-Quantil betraegt 5. Die Daten streuen mittel stark
 
 deskr_kat(Intresse_Prog)
 #Ordinales Merkmal
@@ -68,11 +68,11 @@ deskr_kat(Intresse_Prog)
 #   50%:  4 
 #   75%:  6 
 #   100%: 7 
-# Phi-Streuungsmaß: 0.822884
+# Phi-Streuungsmass: 0.822884
 
 ## Der Median und Modalwert von Intresse an Programmieren betragen 4, welches
 # unter den Werten von Intresse an Mathematik liegt. Die Daten streuen hier 
-# deutlich stärker als bei den Daten zur Intresse an Mathematik
+# deutlich staerker als bei den Daten zur Intresse an Mathematik
 ### bivariater Zusammenhang von Studienfach und Mathe-LK beschrieben durch Cramér- und Pearson-Kontingenzkoeffizienten (Funktion c) )
 
 zus_kat(Studienfach, Mathe.LK) 
@@ -117,9 +117,9 @@ deskr_d(Mathe.LK, Alter)
 # Sum    1   3  11  10  14  24  12  12   3   7   2   1 100
 
 ## das arithmetische Mittel und der Median des Alters sind in beiden Gruppen (Mathe-LK ja/nein) in etwa gleich (um 25)
-## allerdings zeigen Varianz, Standardabweichung und Range größere Werte für Mathe-LK==nein, da streuen die Werte also mehr
-## die Quantile zeigen ebenfalls eine breitere Streuung für Mathe-LK==nein an, das lässt sich auch anhand der Tabelle und des Plots erkennen
-### besonders der Interquartilsabstand (75Q-25Q) zeigt das: für ja 26-24=2 und für nein 27-23=4
+## allerdings zeigen Varianz, Standardabweichung und Range groeßere Werte für Mathe-LK==nein, da streuen die Werte also mehr
+## die Quantile zeigen ebenfalls eine breitere Streuung für Mathe-LK==nein an, das laesst sich auch anhand der Tabelle und des Plots erkennen
+### besonders der Interquartilsabstand (75Q-25Q) zeigt das: fuer ja 26-24=2 und für nein 27-23=4
 
 # für die Interessen-Variablen als metrische Variablen, keine Interpretation von arithm. Mittel, Varianz und Stand.Abw.
 
@@ -155,8 +155,8 @@ deskr_d(Mathe.LK, Intersse.an.Mathematik)
 # Nein   2   6  10  16  15   0   0  49
 # Sum    2   7  17  22  30  19   3 100
 
-## das Interesse an Mathematik liegt im Median für Mathe-LK==ja eine Stufe höher als bei Mathe-LK==nein
-## die Range ist bei Mathe-LK==ja um 1 größer und Minimum und Maximum liegen ein bzw. zwei Stufen höher
+## das Interesse an Mathematik liegt im Median für Mathe-LK==ja eine Stufe hoeher als bei Mathe-LK==nein
+## die Range ist bei Mathe-LK==ja um 1 groesser und Minimum und Maximum liegen ein bzw. zwei Stufen hoeher
 ## die Quantile zeigen eine fast gleiche Streuung bei unterschiedlicher Lage (vgl. Range)
 
 
@@ -193,9 +193,9 @@ deskr_d(Mathe.LK, Intersse.an.Programmieren)
 # Sum    5  14  12  25  16  18  10 100
 
 ## das Interesse an Programmieren liegt im Median für Mathe-LK==ja eine Stufe unter dem für Mathe-LK==nein
-## die Range ist bei Mathe-LK==ja um 1 größer, das Minimum liegt bei 1 bzw. 2 und das Maximum ist bei beiden 7, 
-## sehr große Streuung bei beiden Gruppen
-## bei Mathe-LK==nein ist der Interquartilsabstand 6-3=3 größer als bei ja mit 5-3=2
+## die Range ist bei Mathe-LK==ja um 1 groesser, das Minimum liegt bei 1 bzw. 2 und das Maximum ist bei beiden 7, 
+## sehr grosse Streuung bei beiden Gruppen
+## bei Mathe-LK==nein ist der Interquartilsabstand 6-3=3 groesser als bei ja mit 5-3=2
 
 detach(Daten)
 
@@ -330,7 +330,7 @@ for (i in 1:2) {
 
 #Mathematikinteresse: Das hoechste Interesse ist hier 5
 #                     Schwaches Interesse kommt sehr haeufig vor
-#Programmierinteresse: kein sehr niedriges programmierinteresse. Sonst überall ungefähr gleichviel
+#Programmierinteresse: kein sehr niedriges programmierinteresse. Sonst ueberall ungefaehr gleichviel
 # Interpretation: Menschen, ohne Mathe-LK haben haeufig kein hohes Interesse an Mathematik (sonst haetten sie ja Mathe LK gewaehlt)
 #                 Man hat ein etwas hoeheres Programmierinteresse wenn man keinen Mathe Lk hat, als wenn man Mathe LK hat?
  
@@ -338,7 +338,7 @@ for (i in 1:2) {
 
 # Visualisierung
 katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Mathe.LK)
-## je höher das Interesse.an.Mathematik ist, desto eher Mathe.LK
+## je hoeher das Interesse.an.Mathematik ist, desto eher Mathe.LK
 ## bei Interesse an Mathe>=6 haben alle Mathe.LK==Ja
 ## zwischen Interesse.an.Programmieren und Mathe.LK besteht kein deutlicher Zusammenhang
 
@@ -352,7 +352,7 @@ katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Math
 ## gesteigertes Interesse an Mathe und geringeres Interesse an Prog spricht für Mathematik oder Statistik, mit Mathe-LK für Mathematik
 ## gesteigertes Interesse an Mathe und mittleres Interesse an Prog spricht für Statistik, vor allem mit Mathe-LK
 ## mittleres Interesse an Mathe und gesteigertes Interesse an Prog spricht für Informatik, eher ohne Mathe-LK
-## gleich großes Interesse an Mathe und Prog spricht für Data Science, eher ohne Mathe-LK
+## gleich grosses Interesse an Mathe und Prog spricht für Data Science, eher ohne Mathe-LK
 
 
 
