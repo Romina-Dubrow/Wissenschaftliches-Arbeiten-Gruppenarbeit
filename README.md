@@ -13,7 +13,7 @@ Kontakt: leia.betting@tu.dortmund.de, romina.dubrow@tu-dortmund.de, kathrin.henk
 Aufgabe 1 erledigt <br>
 Aufgabe 2 erledigt <br>
 Aufgabe 3 erledigt <br>
-Aufgabe 4 in Bearbeitung <br>
+Aufgabe 4 erledigt <br>
 Aufgabe 5 in Bearbeitung 
 
 --------------------------------------------------------------------------------
@@ -46,6 +46,8 @@ Es wurde R und R Studio in diesen Versionen genutzt:
  R Studio 1.2.5042 
  R 4.0.3
  
+Wir empfehlen die Verwendung des Encodings UTF-8
+ 
 --------------------------------------------------------------------------------
 
 ### Dateienliste: <br>
@@ -57,6 +59,8 @@ Es wurde R und R Studio in diesen Versionen genutzt:
 **Datensatz.csv**:        Datensatz aus Aufgabe 1 in csv Format <br>
 
 **Hilfsfunktionen.R**:   Verschiedene Hilfsfunktionen für Aufgabe 3<br>
+
+**Aufgabe 4.R**:        R-Skript zur Analyse des Datensatzes <br>
 
 --------------------------------------------------------------------------------
 
