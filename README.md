@@ -14,7 +14,7 @@ Aufgabe 1 erledigt <br>
 Aufgabe 2 erledigt <br>
 Aufgabe 3 erledigt <br>
 Aufgabe 4 erledigt <br>
-Aufgabe 5 in Bearbeitung 
+Aufgabe 5 erledigt
 
 --------------------------------------------------------------------------------
 
