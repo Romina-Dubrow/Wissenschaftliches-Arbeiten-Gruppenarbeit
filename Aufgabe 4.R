@@ -2,7 +2,11 @@
 
 Daten <- read.csv("Datensatz.csv", stringsAsFactors = TRUE) # Einladen der Zeichenketten als Faktoren erleichtert folgende Arbeit
 
+
 attach(Daten)
+
+length(ID) # [1] 100
+## Daten von 100 Personen
 
 deskr(Alter)
 # Deskriptive Statistiken: 
@@ -24,24 +28,40 @@ deskr(Alter)
 # ca. 25. Die Standardabweichung beträgt ungefähr 2.3.
 
 
+table(Studienfach)
+# Studienfach
+# Data Science   Informatik   Mathematik    Statistik 
+#           30           20           15           35 
+
 deskr_kat(Studienfach)
 #Nominales Merkmal
 # Modalwert: Statistik 
 # Phi-Streuungsmass: 0.8125
 
-## Statistik wird am haeufigsten studiert. Die Studeinfaecher sind nicht
+## Statistik wird am haeufigsten studiert, Data Science am zweithaeufigsten 
+# und Mathematik am wenigsten. Die Studeinfaecher sind nicht
 # gleichverteilt, es gibt jedoch eine hohe Streuung
+
+table(Mathe.LK)
+# Mathe.LK
+#  Ja Nein 
+#  51   49 
 
 deskr_kat(Mathe.LK)
 #Nominales Merkmal
 # Modalwert: Ja 
 # Phi-Streuungsmass: 0.98
 
-## Die meiste gaben an, dass sie Mathe LK hatten. Ob der Mathe LK belegt wurde
-# oder nicht scheint gleichverteilt zu sein.
+## Die meiste gaben an, dass sie Mathe LK hatten (51), 49 hatten keinen Mathe LK
+# Ob der Mathe LK belegt wurde oder nicht scheint gleichverteilt zu sein.
 
 Intresse_Mathe <- ordered(Intersse.an.Mathematik)
 Intresse_Prog <- ordered(Intersse.an.Programmieren)
+
+table(Intersse.an.Mathematik)
+# Intersse.an.Mathematik
+# 1  2  3  4  5  6  7 
+# 2  7 17 22 30 19  3 
 
 deskr_kat(Intresse_Mathe)
 #Ordinales Merkmal
@@ -57,6 +77,12 @@ deskr_kat(Intresse_Mathe)
 
 ## Sowohl der Median als auch der Modalwert von Interesse an Mathematik liegen 
 # bei 5 von 7, auch das 75%-Quantil betraegt 5. Die Daten streuen mittel stark
+# Die extremen Werte "1" und "7" wurden nur 5 mal genannt
+
+table(Intersse.an.Programmieren)
+# Intersse.an.Programmieren
+# 1  2  3  4  5  6  7 
+# 5 14 12 25 16 18 10
 
 deskr_kat(Intresse_Prog)
 #Ordinales Merkmal
@@ -73,6 +99,8 @@ deskr_kat(Intresse_Prog)
 ## Der Median und Modalwert von Intresse an Programmieren betragen 4, welches
 # unter den Werten von Intresse an Mathematik liegt. Die Daten streuen hier 
 # deutlich staerker als bei den Daten zur Intresse an Mathematik
+# Die extremen Werte "1" und "sieben"7" wurden hier 15 mal genannt
+
 ### bivariater Zusammenhang von Studienfach und Mathe-LK beschrieben durch Cramér- und Pearson-Kontingenzkoeffizienten (Funktion c) )
 
 zus_kat(Studienfach, Mathe.LK) 
@@ -358,9 +386,11 @@ katVis(Daten$Intersse.an.Mathematik, Daten$Intersse.an.Programmieren, Daten$Math
 
 
 # Fazit:
+# Daten von 100 Studierenden.
 # Die Studierenden im Datensatz sind 20 bis 32 Jahre alt (Durchschnitt 25, Standardabweichung 2.3).
-# Die Studienfaecher sind nicht gleichverteilt. Statistik tritt am haeufigsten auf. 
-# Mehr Studierende hatten Mathe LK. Das arithmetische Mittel und der Median des Alters bei Studierenden, die Mathe LK hatten, ist
+# Die Studienfaecher sind nicht gleichverteilt. Statistik tritt am haeufigsten auf, Mathe am seltesten.
+# Ob die Studierenden Mathe LK hatten oder nicht scheint gleichverteilt.
+# Das arithmetische Mittel und der Median des Alters bei Studierenden, die Mathe LK hatten, ist
 # aehnlich zu dem der Studierenden, die keinen Mathe LK hatten. Trotzdem streut das Alter bei den Studierenden ohne Mathe LK staerker.
 # Mathematikinteresse war im Median und Modalwert 5, Programmierinteresse 4.
 # Programmierinteresse streut stärker als Mathematikinteresse.
